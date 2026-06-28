@@ -6,6 +6,11 @@ Changes are tagged: **[wrapper]** for Python/JS wrapper, **[binary]** for Chromi
 
 ---
 
+## [Unreleased]
+
+- **[wrapper]** One-time startup notice when spoofing the Windows platform on a Linux host without Windows fonts installed, with guidance to install them for best results. Best-effort and silent on error; suppress with `CLOAKBROWSER_SUPPRESS_FONT_WARNING=1`. Python, JS, and .NET.
+- **[wrapper]** The first-launch banner now re-shows to free users every 3 days (Pro users still see it once). Python, JS, and .NET.
+
 ## [0.4.4] — 2026-06-27
 
 - **[wrapper]** **Exact version pinning / rollback** — pin a specific Chromium build with `browser_version=` (`browserVersion` in JS, `BrowserVersion` in .NET) or the `CLOAKBROWSER_VERSION` environment variable, e.g. `launch(browser_version="148.0.7778.215.2")`. Works for both Free and Pro binaries and lets you roll back if a new build regresses on your site. A pin never overwrites the cached "latest" marker, so a later unpinned launch returns to the newest build. Python, JS, and .NET.
